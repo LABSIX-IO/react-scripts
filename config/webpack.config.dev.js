@@ -225,6 +225,38 @@ module.exports = {
           // In production, they would get copied to the `build` folder.
           // This loader doesn't use a "test" so it will catch all modules
           // that fall through the other loaders.
+
+               // Add SASS support  - compile all .global.scss files and pipe it to style.css
+          {
+              test: /\.global\.scss$/,
+              use: [
+                'style-loader',
+                {
+                  loader: 'css-loader',
+                  options: {
+                    sourceMap: true,
+                  },
+                },
+                'sass-loader',
+              ],
+            },
+            // Add SASS support  - compile all other .scss files and pipe it to style.css
+            {
+              test: /^((?!\.global).)*\.scss$/,
+              use: [
+                'style-loader',
+                {
+                  loader: 'css-loader',
+                  options: {
+                    modules: true,
+                    sourceMap: true,
+                    importLoaders: 1,
+                    localIdentName: '[name]__[local]__[hash:base64:5]',
+                  },
+                },
+                'sass-loader',
+              ],
+            },
           {
             // Exclude `js` files to keep "css" loader working as it injects
             // its runtime that would otherwise processed through "file" loader.
