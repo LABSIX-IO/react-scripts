@@ -1,7 +1,7 @@
 {
   "name": "@lab6/react-scripts",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "LAB 6 - Configuration and scripts for Create React App.",
   "repository": "LABSIX-IO/react-scripts",
   "license": "BSD-3-Clause",
@@ -55,6 +55,7 @@
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.10.0",
     "tslint-react": "^3.2.0",
+    "typings-for-css-modules-loader": "^1.7.0",
     "uglifyjs-webpack-plugin": "^1.1.8",
     "url-loader": "0.6.2",
     "webpack": "3.8.1",
