@@ -246,16 +246,17 @@ module.exports = {
               use: [
                 'style-loader',
                 {
-                  loader: 'css-loader',
+                  loader: 'typings-for-css-modules-loader',
                   options: {
                     modules: true,
+                    namedExport: true,
                     sourceMap: true,
                     importLoaders: 1,
-                    localIdentName: '[name]__[local]__[hash:base64:5]',
-                  },
+                    localIdentName: '[name]__[local]__[hash:base64:5]'
+                  }
                 },
-                'sass-loader',
-              ],
+                'sass-loader'
+                ],
             },
           {
             // Exclude `js` files to keep "css" loader working as it injects
