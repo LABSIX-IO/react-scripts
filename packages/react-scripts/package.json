@@ -1,7 +1,7 @@
 {
   "name": "@lab6/react-scripts",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "LAB 6 - Configuration and scripts for Create React App.",
   "repository": "LABSIX-IO/react-scripts",
   "license": "BSD-3-Clause",
